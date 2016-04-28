@@ -1,9 +1,38 @@
 <ion-navbar *navbar>
-    <ion-title>
-        Tab 2
-    </ion-title>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hello Ionic</ion-title>
 </ion-navbar>
 
 <ion-content class="page2">
+    <button [navPush]="aboutPage">去“关于”页面</button>
+    <ion-list>
+        <ion-item>
+            <ion-label fixed>网址</ion-label>
+            <ion-input type="url"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>电话</ion-label>
+            <ion-input type="tel" placeholder="请输入电话号码" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>电邮</ion-label>
+            <ion-input type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>密码</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input placeholder="请输入用户名" clearInput></ion-input>
+        </ion-item>
+        <button ion-item>确定</button>
 
+        <ion-list no-lines2>
+            <ion-item *ngFor="#item of items" (click)="openMenu(item)">
+                {{item.title}}
+            </ion-item>
+        </ion-list>
+    </ion-list>
 </ion-content>
