@@ -10,6 +10,8 @@ import {Page, NavController, NavParams} from 'ionic-angular';
   templateUrl: 'build/pages/detail/detail.html',
 })
 export class DetailPage {
+  selectedItem;
+  
   constructor(public nav: NavController, params: NavParams) {
     console.log(params);
     this.nav = nav;

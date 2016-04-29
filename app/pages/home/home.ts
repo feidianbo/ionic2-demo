@@ -1,4 +1,4 @@
-import {Page, NavController} from 'ionic-angular';
+import {IonicApp, Page, NavController} from 'ionic-angular';
 import {DetailPage} from '../detail/detail';
 import {AboutPage} from '../about/about';
 /*
@@ -12,8 +12,12 @@ import {AboutPage} from '../about/about';
 })
 export class HomePage {
   aboutPage = AboutPage;
+  icons;
+  items;
 
-  constructor(public nav: NavController) {
+  constructor(public nav: NavController, public app: IonicApp) {
+    // app.getComponent('leftMenu').enable(true);
+
     this.nav = nav;
 
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane', 'american-football', 'boat', 'bluetooth', 'build'];
@@ -26,6 +30,14 @@ export class HomePage {
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
+  }
+
+  onPageWillEnter() {
+    console.log(1);
+  }
+
+  onPageWillLeave() {
+    console.log(2);
   }
 
   itemTapped(event, item) {

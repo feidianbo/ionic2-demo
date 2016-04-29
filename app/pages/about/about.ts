@@ -13,8 +13,6 @@ import {Toast} from 'ionic-angular';
 export class AboutPage {
     constructor(public nav: NavController) {
         this.nav = nav;
-
-        
     }
     
    showToast () {
