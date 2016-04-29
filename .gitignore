@@ -6,5 +6,5 @@ plugins/
 *.swp
 .DS_Store
 Thumbs.db
-.vscode/
+#.vscode/
 .idea/
