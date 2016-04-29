@@ -38,6 +38,9 @@
   "description": "ionic2-demo: An Ionic project",
   "repository": "https://github.com/feidianbo/ionic2-demo.git",
   "license":"MIT",
-  "README": "README.md"
+  "README": "README.md",
+  "scripts": {
+    "start": "ionic serve"
+  }
 
 }
