@@ -1,9 +1,11 @@
 import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
-import {TabsPage} from './pages/tabs/tabs';
+// import {TabsPage} from './pages/tabs/tabs';
+import {HomePage} from './pages/home/home';
 
 @App({
-    template: /*'./app.html',//*/'<ion-nav [root]="rootPage"></ion-nav>',
+    templateUrl: 'build/app.html',
+    // template: '<ion-nav [root]="rootPage"></ion-nav>',
     config: { // http://ionicframework.com/docs/v2/api/config/Config/
         backButtonText: '后退',
         // iconMode: 'ios',
@@ -14,7 +16,7 @@ import {TabsPage} from './pages/tabs/tabs';
     }
 })
 export class MyApp {
-    rootPage: any = TabsPage;
+    rootPage: any = HomePage;
 
     constructor(platform: Platform) {
         platform.ready().then(() => {
