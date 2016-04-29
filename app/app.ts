@@ -7,7 +7,7 @@ import {HomePage} from './pages/home/home';
     templateUrl: 'build/app.html',
     // template: '<ion-nav [root]="rootPage"></ion-nav>',
     config: { // http://ionicframework.com/docs/v2/api/config/Config/
-        backButtonText: '后退',
+        backButtonText: '',
         // iconMode: 'ios',
         // modalEnter: 'modal-slide-in',
         // modalLeave: 'modal-slide-out',
